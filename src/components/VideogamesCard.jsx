@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function VideogameCard({ videogame }) {
     return (
         <div className="card h-100 shadow-sm">
@@ -17,7 +19,10 @@ function VideogameCard({ videogame }) {
                 </div>
                 <p className="card-text">{videogame.description}</p>
             </div>
-            <div className="card-footer">{videogame.price}</div>
+            <div className="card-footer d-flex justify-content-between align-items-center">
+                <span>{videogame.price}</span>
+                <Link to={`/videogames/${videogame.id}`} className="btn btn-primary btn-sm">Dettagli</Link>
+            </div>
         </div>
     )
 }

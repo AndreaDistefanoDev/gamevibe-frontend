@@ -15,7 +15,7 @@ function HomePage() {
     return (
         <div className="row g-4">
             {videogames.map(videogame => (
-                <div key={videogame.id} className="col-12 col-md-6 col-lg-4">
+                <div key={videogame.id} className="col-6 col-md-4 col-lg-3">
                     <VideogamesCard videogame={videogame} />
                 </div>
             ))}
